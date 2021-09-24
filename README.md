@@ -4,4 +4,4 @@ Esto repo contiene todos los ejercicios de la segunda clase.
 
 Juas Juas Juas
 
-![Alt Text](https://media.giphy.com/media/reddit-doing-lJNoBCvQYp7nq/giphy.gif)
+![Alt Text](https://media.giphy.com/media/lJNoBCvQYp7nq/giphy.gif)
