@@ -1,5 +1,6 @@
 Vamos a probar los modulos de JS con Node
 
-Espero que funcione.
+Esto repo contiene todos los ejercicios de la segunda clase.
 
+Juas Juas Juas
 
