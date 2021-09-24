@@ -1,3 +1,4 @@
+// mi primer modulo
 
 let comida = [
     {
@@ -16,3 +17,4 @@ let comida = [
 ]
 
 module.exports = comida;
+
