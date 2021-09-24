@@ -1,0 +1,19 @@
+{
+  "name": "Firsttest",
+  "version": "1.0.0",
+  "description": "Vamos a probar los modulos de JS con Node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G-Linares/node_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/G-Linares/node_test/issues"
+  },
+  "homepage": "https://github.com/G-Linares/node_test#readme"
+}
