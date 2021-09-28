@@ -1,5 +1,9 @@
 // mi primer modulo
 
+function palabra(){
+    return ('hola');
+}
+
 let comida = [
     {
         nombre: 'Hamburguesa', 
@@ -11,10 +15,14 @@ let comida = [
         numero: 'Mansion', 
         color: 'Verde',
         ordenar: function(){
-            return "La " + this.nombre + " es color " + this.ingredientes
+            //return "La " + this.nombre + " es color " + this.ingredientes
+             console.log(moment().format('MMM Do YY'));
         } 
     }
 ]
 
-module.exports = comida;
+
+
+module.exports = {palabra, comida};
+
 
