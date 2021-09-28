@@ -1,1 +1,2 @@
-1.- Primer ejercicio de leer texto con Modulo propio de NodeJS
+1.- Primer ejercicio en clase 3.
+
