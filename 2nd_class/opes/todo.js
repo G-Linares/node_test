@@ -4,7 +4,6 @@
 function sumardetodo(num1, num2){
     return num1 + num2;
 }
-
 function restardetodo(num1, num2){
     return num1 - num2;
 }

@@ -1,7 +1,9 @@
-Vamos a probar los modulos de JS con Node
+Aqui voy a estar subiendo los archivos que me pidan en clase.
 
-Esto repo contiene todos los ejercicios de la segunda clase.
+Igualmente ejercicios o situaciones de prueba.
 
-Juas Juas Juas
+Juas Juas Juas.
+
+:3
 
 ![Alt Text](https://media.giphy.com/media/lJNoBCvQYp7nq/giphy.gif)
