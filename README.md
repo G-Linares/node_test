@@ -1,9 +1,9 @@
-Aqui voy a estar subiendo los archivos que me pidan en clase.
+# Bootcamp Fullstack Node
 
-Igualmente ejercicios o situaciones de prueba.
+Aqui voy a estar subiendo todos los archivos que vaya adquiriendo en las clases y practicas.
 
-Juas Juas Juas.
+## Notas
 
-:3
-
+1. Voy a ir subiendo archivos destacados de cada clase y ejercicios que me vayan pidiendo en Playground y clases en vivo.
+1. Miren este gatito bonito
 ![Alt Text](https://media.giphy.com/media/lJNoBCvQYp7nq/giphy.gif)
