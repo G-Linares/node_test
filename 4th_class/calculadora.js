@@ -21,5 +21,5 @@ console.log("La division es: " + (mimodulo.dividirdetodo(100,50)));
 
 console.log("\nLa suma es: " + sumaind.sumarind(1, 2));
 console.log("La resta es: " + restaind.restarind(10, 2));
-console.log("La multiplicacion es: " + multiplicacionind.multiplicarind(5,10));
-console.log("La division es: " + divisionind.dividirind(100,50));
+console.log("La multiplicacion es: " + multiplicacionind.multiplicarind(2,10));
+console.log("La division es: " + divisionind.dividirind(100,0));
