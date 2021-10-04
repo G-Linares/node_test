@@ -1,21 +1,20 @@
-//se llama al modulo
-let fs = require('fs');
-//se asigna el valor del JSON a Datos
-let datos = fs.readFileSync(__dirname + '/tareas.json','utf-8');
-// crea el String
-let datosOrigi = JSON.stringify(JSON.parse(datos),null,2);
-// crea los datos en Objeto Literal
-//let datosOrigi = JSON.parse(datos);
-// toma el argumento de terminal de comandos
+// entra la modularidad y llamo a mi modulo nuevo
+
+let mimodulo = require('./funcionesDeTareas');
+
+// encunetro argumento en linea de comando
 let accion = process.argv[2];
 
+//checo posibles opciones de argumento en linea de comando
 switch(accion){
     case undefined:
         console.log("Atencion -Tienes que pasar una accion");
         break;
 
     case 'listar':
-        console.log(datosOrigi);
+        //se imprime como objeto por que en string se ve feo
+        //console.log(JSON.stringify(mimodulo["datos"]));
+        console.log(mimodulo["datos"]);
         break;
 
     default:
