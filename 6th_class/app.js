@@ -8,7 +8,7 @@ let accion = process.argv[2];
 let nuevaTarea = process.argv.slice(3);
 let nuevaTareaObj = [{
     titulo: nuevaTarea.join(' '),
-    estado: "en processo"
+    estado: "en progreso"
 }];
 
 //checo posibles opciones de argumento en linea de comando
@@ -19,7 +19,7 @@ switch(accion){
 
     case 'listar':
         miobjetotareas.forEach(function(unatarea, index){
-            console.log((index + 1) + ' '+ unatarea.titulo);
+            console.log((index + 1) + ' '+ unatarea.titulo + '   -   ' +unatarea.estado);
         });
         break;
     
@@ -33,7 +33,4 @@ switch(accion){
         console.log("No entiendo que quieres hacer");
         break;
 }    
-
-
-
 
