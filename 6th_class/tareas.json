@@ -1,1 +1,10 @@
-[{"titulo":"Comer","estado":"pendiente"},{"titulo":"Tomar una Ducha","estado":"en progreso"},{"titulo":"Aprender JS","estado":"terminada"},{"titulo":"Comer pizza","estado":"en processo"}]
+[
+    {"titulo": "Comer",
+    "estado": "pendiente"},
+
+    {"titulo": "Tomar una Ducha",
+    "estado": "en progreso"},
+
+    {"titulo": "Aprender JS",
+    "estado": "terminada"}
+]
