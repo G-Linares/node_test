@@ -1,9 +1,14 @@
 // entra la modularidad y llamo a mi modulo nuevo
 
-let mimodulo = require('./funcionesDeTareas');
+const tareasFunc = require('./funcionesDeTareas');
+
 
 // encunetro argumento en linea de comando
 let accion = process.argv[2];
+
+let tareas = tareasFunc.leerArchivo();
+
+
 
 //checo posibles opciones de argumento en linea de comando
 switch(accion){
@@ -12,9 +17,23 @@ switch(accion){
         break;
 
     case 'listar':
-        //se imprime como objeto por que en string se ve feo
-        //console.log(JSON.stringify(mimodulo["datos"]));
-        console.log(mimodulo["datos"]);
+        tareas.forEach(function(unatarea, index){
+            console.log((index + 1) + ' '+ unatarea.titulo + '   -   ' + unatarea.estado); 
+        });
+
+        break;
+
+    case 'crear':
+        const nuevaTarea = {
+            titulo: process.argv[3],
+            estado: 'pendiente'
+        };
+        tareasFunc.guardarTarea(nuevaTarea);
+        break;
+    
+    case 'filtrar':
+        let parametro = process.argv[3];
+        tareasFunc.filtrarPorEstado(tareas, parametro);
         break;
 
     default:

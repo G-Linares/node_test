@@ -1,8 +1,58 @@
 //invoco modulo de fs
 let fs = require('fs');
-//leo los arichivos de JSON
-let datos = fs.readFileSync(__dirname + '/tareas.json','utf-8');
-// crea el String pero no lo ocupo
-let datosOrigi = JSON.stringify(JSON.parse(datos),null,2);
-// exporto datos (sale como objeto)
-module.exports = {datos};
+
+
+function leerArchivo(){
+    const archivo = fs.readFileSync('./tareas.json','utf-8');
+    return JSON.parse(archivo);
+}
+
+function guardarArchivo(tareas){
+    let tareasJSON = JSON.stringify(tareas);
+    fs.writeFileSync('./tareas.json', tareasJSON);
+}
+
+
+function guardarTarea(tarea){
+    let tareasActuales = leerArchivo();
+    tareasActuales.push(tarea);
+    guardarArchivo(tareasActuales);
+}
+
+function filtrarPorEstado(tareas, parametro){
+    switch(parametro){
+        case 'pendiente':
+            for (let i = 0; i < tareas.length; i = i + 1) {
+                if (tareas[i].estado == 'pendiente') {
+                  console.log(tareas[i].titulo + ' se encuentra en estado: ' + tareas[i].estado);
+                }
+            }
+            break;
+
+        case'progreso':
+            for (let i = 0; i < tareas.length; i = i + 1) {
+                if (tareas[i].estado == 'progreso') {
+                  console.log(tareas[i].titulo + ' se encuentra en estado: ' + tareas[i].estado);
+                }
+            }
+            break;
+
+        case'terminada':
+            for (let i = 0; i < tareas.length; i = i + 1) {
+                if (tareas[i].estado == 'terminada') {
+                  console.log(tareas[i].titulo + ' se encuentra en estado: ' + tareas[i].estado);
+                }
+            }
+            break;
+    }
+}
+
+/*function filtrarPorEstado(estado){
+    let tareasActuales = this.leerArchivo();
+    const tareaFiltradas = tareasActuales.filter(function(unestado){
+        return unestado === 'pendiente'
+    }
+}
+*/
+
+module.exports = {guardarTarea, leerArchivo, filtrarPorEstado};
