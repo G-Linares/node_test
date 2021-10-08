@@ -18,7 +18,7 @@ switch(accion){
 
     case 'listar':
         tareas.forEach(function(unatarea, index){
-            console.log((index + 1) + ' '+ unatarea.titulo + '   -   ' + unatarea.estado); 
+            console.log(`${index + 1}.- La tarea: ${unatarea.titulo}.   Se encuentra es estado --> ${unatarea.estado}`);
         });
 
         break;
