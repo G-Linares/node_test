@@ -17,10 +17,8 @@ switch(accion){
         break;
 
     case 'listar':
-        tareas.forEach(function(unatarea, index){
-            console.log(`${index + 1}.- La tarea: ${unatarea.titulo}.   Se encuentra es estado --> ${unatarea.estado}`);
-        });
-
+        console.log(`===== Listando todas las tareas =====`);
+        tareasFunc.listarTareas(tareas);
         break;
 
     case 'crear':
@@ -29,11 +27,15 @@ switch(accion){
             estado: 'pendiente'
         };
         tareasFunc.guardarTarea(nuevaTarea);
+        console.log(`===== Nueva Tarea Creada =====`);
         break;
     
     case 'filtrar':
-        let parametro = process.argv[3];
-        tareasFunc.filtrarPorEstado(tareas, parametro);
+        let estado = process.argv[3];
+        const tareasFiltradas = tareasFunc.filtrarPorEstado(estado);
+        console.log(`===== Filtrando tareas con el estado: ${estado} =====`);
+        tareasFunc.listarTareas(tareasFiltradas);
+
         break;
 
     default:

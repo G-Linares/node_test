@@ -19,40 +19,18 @@ function guardarTarea(tarea){
     guardarArchivo(tareasActuales);
 }
 
-function filtrarPorEstado(tareas, parametro){
-    switch(parametro){
-        case 'pendiente':
-            for (let i = 0; i < tareas.length; i = i + 1) {
-                if (tareas[i].estado == 'pendiente') {
-                  console.log(tareas[i].titulo + ' se encuentra en estado: ' + tareas[i].estado);
-                }
-            }
-            break;
-
-        case'progreso':
-            for (let i = 0; i < tareas.length; i = i + 1) {
-                if (tareas[i].estado == 'progreso') {
-                  console.log(tareas[i].titulo + ' se encuentra en estado: ' + tareas[i].estado);
-                }
-            }
-            break;
-
-        case'terminada':
-            for (let i = 0; i < tareas.length; i = i + 1) {
-                if (tareas[i].estado == 'terminada') {
-                  console.log(tareas[i].titulo + ' se encuentra en estado: ' + tareas[i].estado);
-                }
-            }
-            break;
-    }
-}
-
-/*function filtrarPorEstado(estado){
+function filtrarPorEstado(estado){
     let tareasActuales = this.leerArchivo();
-    const tareaFiltradas = tareasActuales.filter(function(unestado){
-        return unestado === 'pendiente'
-    }
+    const tareaFiltradas = tareasActuales.filter((unaTarea) => estado == unaTarea.estado);
+        return tareaFiltradas;
 }
-*/
 
-module.exports = {guardarTarea, leerArchivo, filtrarPorEstado};
+function listarTareas(tareas){
+    tareas.forEach(function(unatarea, index){
+        console.log(`${index + 1}.- La tarea: ${unatarea.titulo}.  Se encuentra es estado: ${unatarea.estado}`);
+    });
+}
+
+
+
+module.exports = {guardarTarea, leerArchivo, filtrarPorEstado,listarTareas};
