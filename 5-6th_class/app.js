@@ -1,14 +1,9 @@
 // entra la modularidad y llamo a mi modulo nuevo
-
 const tareasFunc = require('./funcionesDeTareas');
-
-
 // encunetro argumento en linea de comando
 let accion = process.argv[2];
 
 let tareas = tareasFunc.leerArchivo();
-
-
 
 //checo posibles opciones de argumento en linea de comando
 switch(accion){

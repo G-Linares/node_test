@@ -1,7 +1,6 @@
 //invoco modulo de fs
 let fs = require('fs');
 
-
 function leerArchivo(){
     const archivo = fs.readFileSync('./tareas.json','utf-8');
     return JSON.parse(archivo);
@@ -30,7 +29,5 @@ function listarTareas(tareas){
         console.log(`${index + 1}.- La tarea: ${unatarea.titulo}.  Se encuentra es estado: ${unatarea.estado}`);
     });
 }
-
-
 
 module.exports = {guardarTarea, leerArchivo, filtrarPorEstado,listarTareas};
